@@ -2,7 +2,8 @@ import React from 'react';
 
 function App() {
   return (
-    <div>fdsdfd</div>
+    // eslint-disable-next-line react/jsx-filename-extension
+    <div>Npm run storybook</div>
   );
 }
 
