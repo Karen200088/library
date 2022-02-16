@@ -1,0 +1,45 @@
+.alert {
+  border-radius: 6px;
+  padding: 10px 16px;
+  background: whitesmoke;
+  font-size: 18px;
+}
+
+.alert > .close-button-icon {
+  font-size: 23px;
+  font-weight: 900;
+  padding-right: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+.alert > .alert-body > svg {
+  width: 15px;
+  height: 15px;
+  font-weight: 900;
+  padding-right: 7px;
+}
+
+.alert-success {
+  background: #EDF7ED;
+  color: rgb(30, 70, 32);
+  border: 1px solid rgba(30, 70, 32, 0.2);
+}
+
+.alert-info {
+  background: #E5F6FD;
+  color: rgb(1, 67, 97);
+  border: 1px solid rgba(1, 67, 97, 0.2);
+}
+
+.alert-warning {
+  background: #FFF4E5;
+  color: rgb(102, 60, 0);
+  border: 1px solid rgba(102, 60, 0, 0.2);
+}
+
+.alert-error {
+  background: #FDEDED;
+  color: rgb(95, 33, 32);
+  border: 1px solid rgba(95, 33, 32, 0.2);
+}
