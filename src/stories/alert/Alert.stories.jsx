@@ -26,7 +26,6 @@ Info.args = {
   variant: 'info',
   children: 'This is an info alert — check it out!',
   closeButton: false,
-  // eslint-disable-next-line react/jsx-no-undef
   icon: true,
 };
 

@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './alert.css';
 import { IoIosClose } from 'react-icons/io';
 import {
-  MdOutlineFileDownloadDone, MdInfoOutline, MdWarningAmber, MdErrorOutline,
+  MdErrorOutline,
+  MdInfoOutline,
+  MdOutlineFileDownloadDone,
+  MdWarningAmber,
 } from 'react-icons/md';
 
 /**
@@ -11,10 +14,19 @@ import {
  */
 // eslint-disable-next-line import/prefer-default-export
 export function Alert({
-  variant, closeButton, icon, ...props
+  variant, closeButton, icon, alertVisibleDuration, ...props
 }) {
   const variantClass = `alert-${variant}`;
   const [alertVisible, setAlertVisible] = useState(true);
+  let alertHideTimeout = '';
+
+  useEffect(() => {
+    // eslint-disable-next-line max-len
+    if (alertVisibleDuration > 0) alertHideTimeout = setTimeout(() => setAlertVisible(false), alertVisibleDuration);
+    return () => {
+      clearTimeout(alertHideTimeout);
+    };
+  }, []);
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -62,4 +74,9 @@ Alert.propTypes = {
    */
   // eslint-disable-next-line react/require-default-props
   icon: PropTypes.bool,
+  /**
+   * Milliseconds after which the alert will disappear
+   */
+  // eslint-disable-next-line react/require-default-props
+  alertVisibleDuration: PropTypes.number,
 };
