@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './alert.css';
-import { IoIosClose } from 'react-icons/io';
 import {
   MdErrorOutline,
   MdInfoOutline,
   MdOutlineFileDownloadDone,
   MdWarningAmber,
+  MdClose,
 } from 'react-icons/md';
 
 /**
@@ -45,7 +45,7 @@ export function Alert({
             { variant === 'error' && icon === true ? <MdErrorOutline /> : ''}
             {props.children}
           </span>
-          {closeButton && <IoIosClose className="close-button-icon" onClick={() => setAlertVisible(false)} />}
+          {closeButton && <MdClose className="close-button-icon" onClick={() => setAlertVisible(false)} />}
         </div>
         )
       }
