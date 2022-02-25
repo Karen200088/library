@@ -1,0 +1,35 @@
+.success {
+  background: #EDF7ED;
+  color: rgb(30, 70, 32);
+  border: 1px solid rgba(30, 70, 32, 0.2);
+}
+
+.info {
+  background: #E5F6FD;
+  color: rgb(1, 67, 97);
+  border: 1px solid rgba(1, 67, 97, 0.2);
+}
+
+.warning {
+  background: #FFF4E5;
+  color: rgb(102, 60, 0);
+  border: 1px solid rgba(102, 60, 0, 0.2);
+}
+
+.error {
+  background: #FDEDED;
+  color: rgb(95, 33, 32);
+  border: 1px solid rgba(95, 33, 32, 0.2);
+}
+
+.dark {
+  background: #343A40;
+  color: #fff;
+  border: 1px solid whitesmoke;
+}
+
+.light {
+  background: #fff;
+  color: #343A40;
+  border: 1px solid rgba(52, 58, 64, 0.2);
+}

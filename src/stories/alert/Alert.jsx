@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { oneOfType } from 'prop-types';
 import './alert.css';
 import {
   MdErrorOutline,
@@ -43,9 +43,9 @@ export function Alert({
             { variant === 'info' && icon === true ? <MdInfoOutline /> : ''}
             { variant === 'warning' && icon === true ? <MdWarningAmber /> : ''}
             { variant === 'error' && icon === true ? <MdErrorOutline /> : ''}
-            {props.children}
           </span>
           {closeButton && <MdClose className="close-button-icon" onClick={() => setAlertVisible(false)} />}
+          {props.children}
         </div>
         )
       }
@@ -62,8 +62,11 @@ Alert.propTypes = {
   /**
    * Alert message text
    */
-  // eslint-disable-next-line react/require-default-props
-  children: PropTypes.node,
+  // eslint-disable-next-line react/require-default-props,no-undef
+  children: oneOfType([
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   /**
    * Close button
    */
