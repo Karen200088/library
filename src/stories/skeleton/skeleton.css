@@ -1,0 +1,68 @@
+.skeleton-image-light {
+  cursor: progress;
+  background: #F4F4F4;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.skeleton-image-dark {
+  cursor: progress;
+  background: #343a40;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.skeleton-text-light {
+  cursor: progress;
+  background: #F4F4F4;
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.skeleton-text-dark {
+  cursor: progress;
+  background: #343a40;
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.skeleton-image-light-animated {
+  animation: loading-img 1.5s infinite;
+  background: linear-gradient(0.25turn, transparent, #ffffff, transparent), linear-gradient(#eeeeee, #eeeeee) no-repeat;
+  background-position: -300px 0, 0 0, 0px 190px, 50px 195px;
+}
+
+.skeleton-image-dark-animated {
+  animation: loading-img 1.5s infinite;
+  background: linear-gradient(0.25turn, transparent, #4f545a, transparent), linear-gradient(#343a40, #343A40) no-repeat;
+  background-position: -300px 0, 0 0, 0px 190px, 50px 195px;
+}
+
+.skeleton-text-light-animated {
+  animation: loading-text 1.5s infinite;
+  background: linear-gradient(0.25turn, transparent, #ffffff, transparent), linear-gradient(#eeeeee, #eeeeee) no-repeat;
+  background-position: -200px 0, 0 0, 0 100px, 20px 105px;
+}
+
+.skeleton-text-dark-animated {
+  animation: loading-text 1.5s infinite;
+  background: linear-gradient(0.25turn, transparent, #76797d, transparent), linear-gradient(#343a40, #343A40) no-repeat;
+  background-position: -200px 0, 0 0, 0 100px, 20px 105px;
+}
+
+@keyframes loading-img {
+  to {
+    background-position: 300px 0, 0 0, 0 190px, 50px 195px;
+  }
+}
+@keyframes loading-text {
+  to {
+    background-position: 200px 0, 0 0, 0 100px, 20px 105px;
+  }
+}
+
+/*# sourceMappingURL=skeleton.css.map */

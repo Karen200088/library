@@ -1,0 +1,68 @@
+.dropdown {
+  margin: 5px;
+}
+.dropdown .dropdown-header {
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+.dropdown .dropdown-header p {
+  margin: 0;
+}
+.dropdown .dropdown-header p svg {
+  height: 14px;
+}
+.dropdown .dropdown-list {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  transition: 1s;
+  position: relative;
+  z-index: 2;
+}
+.dropdown .dropdown-list .dropdown-item {
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dropdown .dropdown-list .dropdown-item:hover {
+  background: #dedede;
+  color: #343A40;
+}
+
+.dropdown-dark {
+  background: #343A40;
+  color: whitesmoke;
+}
+
+.dropdown-light {
+  border: 1px solid rgba(52, 58, 64, 0.2);
+}
+
+.dropdown-enter {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.dropdown-exit {
+  opacity: 1;
+}
+
+.dropdown-exit-active {
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/*# sourceMappingURL=dropdown.css.map */
