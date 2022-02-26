@@ -58,7 +58,7 @@ Alert.propTypes = {
    * Variant of alert
    */
   // eslint-disable-next-line react/require-default-props
-  variant: PropTypes.oneOf(['success', 'info', 'warning', 'error']),
+  variant: PropTypes.oneOf(['success', 'info', 'warning', 'error']).isRequired,
   /**
    * Alert message text
    */
@@ -66,7 +66,7 @@ Alert.propTypes = {
   children: oneOfType([
     PropTypes.node,
     PropTypes.string,
-  ]),
+  ]).isRequired,
   /**
    * Close button
    */

@@ -32,12 +32,12 @@ Skeleton.propTypes = {
    * Variant of Skeleton
    */
   // eslint-disable-next-line react/require-default-props
-  variant: PropTypes.oneOf(['dark', 'light']),
+  variant: PropTypes.oneOf(['dark', 'light']).isRequired,
   /**
    * Type of Skeleton
    */
   // eslint-disable-next-line react/require-default-props
-  type: PropTypes.oneOf(['text', 'image']),
+  type: PropTypes.oneOf(['text', 'image']).isRequired,
   /**
    * Animation of Skeleton
    */

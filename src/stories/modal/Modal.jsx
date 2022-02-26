@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './modal.css';
 import { MdClose } from 'react-icons/md';
-import useClickOutside from '../hooks/useClickOutside';
 
 /**
  * The modal component provides a solid foundation for creating dialogs and whatever else.
@@ -13,9 +12,6 @@ export function Modal({
   variant, closeButton, ...props
 }) {
   const [modalOpen, setModalOpen] = useState(false);
-  const clickRef = useRef();
-
-  useClickOutside(clickRef, setModalOpen);
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -25,7 +21,7 @@ export function Modal({
       {modalOpen && (
       // eslint-disable-next-line react/jsx-props-no-spreading
       <div className="modal" {...props}>
-        <div className="modal-content" ref={clickRef}>
+        <div className="modal-content">
           <div className="modal-header">
             <div className="modal-title">Modal header</div>
             {closeButton && (
@@ -60,7 +56,7 @@ Modal.propTypes = {
    * Variant of Modal
    */
   // eslint-disable-next-line react/require-default-props
-  variant: PropTypes.oneOf(['dark', 'light']),
+  variant: PropTypes.oneOf(['dark', 'light']).isRequired,
   /**
    * Close button
    */

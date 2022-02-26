@@ -1,0 +1,132 @@
+$primary: #40464c;
+$secondary: #c7ced2;
+$gray: #9b9b9b;
+
+.input-block {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 35%;
+}
+
+.disable {
+  opacity: 0.5;
+  .input-label {
+    user-select: none;
+
+  }
+}
+
+.input-field {
+  width: 100%;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .input-label {
+    font-size: 20px;
+    cursor: text;
+    top: 25px;
+  }
+}
+
+.input-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  left: 5px;
+}
+
+.input-field:focus {
+  ~ .input-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+  }
+
+  padding-bottom: 6px;
+
+}
+
+/* reset input */
+.input-field {
+  &:required, &:invalid {
+    box-shadow: none;
+  }
+}
+
+.input-default-standard {
+
+  .input-field {
+    border: 0;
+    border-bottom: 2px solid #343A40;
+    border-image: linear-gradient(to left, #40464c, #c7ced2);
+    border-image-slice: 1;
+    &:focus {
+      border-bottom: 2px solid #343A40;
+    }
+  }
+
+  .input-label {
+    color: #343A40;
+  }
+
+}
+
+
+.input-default-outline {
+
+  .input-field {
+    border: 2px solid #40464c;
+    border-radius: 10px;
+  }
+
+  .input-label {
+    color: #343A40;
+  }
+
+}
+
+.input-error-standard {
+
+  .input-field {
+    border: 0;
+    border-bottom: 2px solid rgba(187, 1, 1, 0.82);
+
+    &:focus {
+      border-bottom: 2px solid #bb0101;
+      border-image-slice: 1;
+    }
+  }
+
+  .input-label {
+    color: #bb0101;
+  }
+
+}
+
+
+.input-error-outline {
+
+  .input-field {
+    border: 2px solid rgba(187, 1, 1, 0.82);
+    border-radius: 10px;
+    padding: 7px;
+
+  }
+
+  .input-label {
+    color: #bb0101;
+  }
+
+}

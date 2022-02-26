@@ -3,9 +3,7 @@ import { useEffect } from 'react';
 const useClickOutside = (ref, callback) => {
   const handleClick = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
-      setTimeout(() => {
-        callback(false);
-      }, 5000);
+        callback();
     }
   };
   // eslint-disable-next-line no-undef

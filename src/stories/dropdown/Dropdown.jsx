@@ -54,6 +54,6 @@ Dropdown.propTypes = {
    * Variant of Dropdown
    */
   // eslint-disable-next-line react/require-default-props
-  variant: PropTypes.oneOf(['dark', 'light']),
+  variant: PropTypes.oneOf(['dark', 'light']).isRequired,
 
 };
