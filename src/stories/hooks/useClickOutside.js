@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const useClickOutside = (ref, callback) => {
   const handleClick = (event) => {
     if (ref.current && !ref.current.contains(event.target)) {
-        callback();
+      callback();
     }
   };
   // eslint-disable-next-line no-undef
