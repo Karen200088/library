@@ -18,13 +18,11 @@ function App() {
           closeButton
           variant="dark"
         />
-        {/*  bug */}
       </div>
       <br />
       <br />
       <div>
         <Dropdown variant="dark" closeButton />
-        {/*  bug */}
       </div>
       <br />
       <br />
